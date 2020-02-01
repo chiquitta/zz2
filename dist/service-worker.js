@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "zz2/precache-manifest.2c2e04f9ce7352e1efbf83ec2169e98d.js"
+  "/zz2/precache-manifest.0fc485e2d606b697883e93170bbd9cc0.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "zz2"});
