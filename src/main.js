@@ -1,35 +1,28 @@
 import Vue from 'vue';
-import { Button } from 'view-design';
-import VueI18n from 'vue-i18n';
-import en from 'view-design/dist/locale/en-US';
-import tw from 'view-design/dist/locale/zh-TW';
+import {
+  Button,
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+} from 'element-ui';
 import VueFullPage from 'vue-fullpage.js';
 import App from './App.vue';
 import './registerServiceWorker';
 import router from './router';
 import store from './store';
-
-import 'view-design/dist/styles/iview.css';
+import i18n from './locale';
+import 'element-ui/lib/theme-chalk/index.css';
+import 'line-awesome/dist/line-awesome/css/line-awesome.min.css';
 // import 'vue-fullpage.js/vue-fullpage.css';
 
 Vue.config.productionTip = false;
 
-Vue.use(VueI18n);
 Vue.use(VueFullPage);
 
-Vue.locale = () => {};
-
-const messages = {
-  en: Object.assign({ hello: 'hello' }, en),
-  tw: Object.assign({ hello: '你好' }, tw),
-};
-
-const i18n = new VueI18n({
-  locale: 'tw',
-  messages,
-});
-
-Vue.component('Button', Button);
+Vue.component(Button.name, Button);
+Vue.component(Dropdown.name, Dropdown);
+Vue.component(DropdownItem.name, DropdownItem);
+Vue.component(DropdownMenu.name, DropdownMenu);
 
 new Vue({
   router,
