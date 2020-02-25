@@ -4,7 +4,7 @@
       <i class="las la-globe la-2x"></i>
     </span>
     <el-dropdown-menu slot="dropdown">
-      <el-dropdown-item command="zh-cn">繁體中文</el-dropdown-item>
+      <el-dropdown-item command="zh-tw">繁體中文</el-dropdown-item>
       <el-dropdown-item command="zh-cn">简体中文</el-dropdown-item>
       <el-dropdown-item command="en">English</el-dropdown-item>
     </el-dropdown-menu>
@@ -34,10 +34,11 @@ export default {
     },
   },
   methods: {
-    ...mapMutations('app', [
+    ...mapMutations([
       'setLocal',
     ]),
     handleCommand(command) {
+      console.log(command);
       this.setLocal(command);
       this.$i18n.locale = command;
     },

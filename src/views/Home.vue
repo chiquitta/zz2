@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <language class="float-right" lang="zh-tw" />
+    <language class="float-right" lang="zh-TW" />
+    {{ $t('hi') }}
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
   </div>
 </template>

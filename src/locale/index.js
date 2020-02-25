@@ -11,15 +11,15 @@ import { localRead } from '@/utils';
 Vue.use(VueI18n);
 
 const navLang = navigator.language;
-const localLang = (navLang === 'zh-TW' || navLang === 'en') ? navLang : false;
-const lang = localRead('local') || localLang || 'zh-TW';
+const localLang = (navLang === 'zh-tw' || navLang === 'en') ? navLang : false;
+const lang = localRead('local') || localLang || 'zh-tw';
 
 Vue.config.lang = lang;
 
 Vue.locale = () => {};
 const messages = {
-  'zh-TW': { ...localeZhTw, ...langZhTw },
-  'zn-cn': { ...localeZhCn, ...langZhCn },
+  'zh-tw': { ...localeZhTw, ...langZhTw },
+  'zh-cn': { ...localeZhCn, ...langZhCn },
   en: { ...localeEn, ...langEn },
 };
 
